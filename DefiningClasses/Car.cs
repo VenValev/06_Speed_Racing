@@ -7,6 +7,9 @@ namespace DefiningClasses
     class Car
     {
         private string model;
-        private 
+        private double fuelAmount;
+        private double FuelConsumptionPerKilometer;
+        private double travelledDistance;
+
     }
 }
