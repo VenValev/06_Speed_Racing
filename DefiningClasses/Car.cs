@@ -11,5 +11,9 @@ namespace DefiningClasses
         private double FuelConsumptionPerKilometer;
         private double travelledDistance;
 
+        public Car(string model, double fuelAmount, double FuelConsumptionPerKilometer)
+        {
+
+        }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace DefiningClasses
 {
@@ -6,7 +7,17 @@ namespace DefiningClasses
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            int n = int.Parse(Console.ReadLine());
+            List<Car> Cars = new List<Car>();
+
+            for(int i = 0; i < n; i++)
+            {
+                string[] text = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
+                string model = text[0];
+                double fuelAmount = double.Parse(text[1]);
+                double fuelConsumptionPerKilometer = double.Parse(text[2]);
+
+            }
         }
     }
 }
