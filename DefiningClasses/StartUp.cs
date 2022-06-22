@@ -24,7 +24,8 @@ namespace DefiningClasses
 
             while((cmnd = Console.ReadLine()) != "end")
             {
-
+                string model = cmnd.Split(' ', StringSplitOptions.RemoveEmptyEntries)[1];
+                double amountOfKM = double.Parse(cmnd.Split(' ', StringSplitOptions.RemoveEmptyEntries)[1]);
             }
         }
     }
