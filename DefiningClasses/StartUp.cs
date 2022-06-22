@@ -16,6 +16,7 @@ namespace DefiningClasses
                 string model = text[0];
                 double fuelAmount = double.Parse(text[1]);
                 double fuelConsumptionPerKilometer = double.Parse(text[2]);
+                
 
             }
         }

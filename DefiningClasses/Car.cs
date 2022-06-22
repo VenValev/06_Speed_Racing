@@ -8,12 +8,31 @@ namespace DefiningClasses
     {
         private string model;
         private double fuelAmount;
-        private double FuelConsumptionPerKilometer;
+        private double fuelConsumptionPerKilometer;
         private double travelledDistance;
 
         public Car(string model, double fuelAmount, double FuelConsumptionPerKilometer)
         {
-
+            Model = model;
+            FuelAmount = fuelAmount;
+            FuelConsumptionPerKilometer = fuelConsumptionPerKilometer;
+            TravelledDistance = 0;
         }
+
+        private string Model
+        {
+            get; set;
+        }
+        public double FuelAmount
+        {
+            get; set;
+        }
+        public double FuelConsumptionPerKilometer
+        {
+            get; set;
+        }
+
+        public double TravelledDistance {get; set; }
+
     }
 }
