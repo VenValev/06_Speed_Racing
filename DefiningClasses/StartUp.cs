@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace DefiningClasses
 {
@@ -14,18 +15,25 @@ namespace DefiningClasses
             {
                 string[] text = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
                 string model = text[0];
-                double fuelAmount = double.Parse(text[1]);
-                double fuelConsumptionPerKilometer = double.Parse(text[2]);
+                decimal fuelAmount = decimal.Parse(text[1]);
+                decimal fuelConsumptionPerKilometer = decimal.Parse(text[2]);
                 Car car = new Car(model, fuelAmount, fuelConsumptionPerKilometer);
                 cars.Add(car);
             }
 
             string cmnd;
 
-            while((cmnd = Console.ReadLine()) != "end")
+            while((cmnd = Console.ReadLine()) != "End")
             {
                 string model = cmnd.Split(' ', StringSplitOptions.RemoveEmptyEntries)[1];
-                double amountOfKM = double.Parse(cmnd.Split(' ', StringSplitOptions.RemoveEmptyEntries)[1]);
+                decimal amountOfKM = decimal.Parse(cmnd.Split(' ', StringSplitOptions.RemoveEmptyEntries)[2]);
+                Car carToDrive = cars.First(c => c.Model == model);
+                carToDrive.Drive(amountOfKM);
+            }
+
+            foreach(Car car in cars)
+            {
+                Console.WriteLine($"{car.Model} {car.FuelAmount:f2} {car.TravelledDistance}");
             }
         }
     }

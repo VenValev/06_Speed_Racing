@@ -7,11 +7,11 @@ namespace DefiningClasses
     class Car
     {
         private string model;
-        private double fuelAmount;
-        private double fuelConsumptionPerKilometer;
-        private double travelledDistance;
+        private decimal fuelAmount;
+        private decimal fuelConsumptionPerKilometer;
+        private decimal travelledDistance;
 
-        public Car(string model, double fuelAmount, double FuelConsumptionPerKilometer)
+        public Car(string model, decimal fuelAmount, decimal fuelConsumptionPerKilometer)
         {
             Model = model;
             FuelAmount = fuelAmount;
@@ -19,24 +19,24 @@ namespace DefiningClasses
             TravelledDistance = 0;
         }
 
-        private string Model
+        public string Model
         {
             get; set;
         }
-        public double FuelAmount
+        public decimal FuelAmount
         {
             get; set;
         }
-        public double FuelConsumptionPerKilometer
+        public decimal FuelConsumptionPerKilometer
         {
             get; set;
         }
 
-        public double TravelledDistance {get; set; }
+        public decimal TravelledDistance {get; set; }
 
-        public void Drive(double amountOfKM)
+        public void Drive(decimal amountOfKM)
         {
-            double neededLiters = amountOfKM * FuelConsumptionPerKilometer;
+            decimal neededLiters = amountOfKM * FuelConsumptionPerKilometer;
             if (FuelAmount >= neededLiters)
             {
                 FuelAmount -= neededLiters;
