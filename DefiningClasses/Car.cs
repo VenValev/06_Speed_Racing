@@ -34,5 +34,19 @@ namespace DefiningClasses
 
         public double TravelledDistance {get; set; }
 
+        public void Drive(double amountOfKM)
+        {
+            double neededLiters = amountOfKM * FuelConsumptionPerKilometer;
+            if (FuelAmount >= neededLiters)
+            {
+                FuelAmount -= neededLiters;
+                TravelledDistance += amountOfKM;
+            }
+            else
+            {
+                Console.WriteLine("Insufficient fuel for the drive");
+            }
+        }
+
     }
 }
