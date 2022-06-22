@@ -8,7 +8,7 @@ namespace DefiningClasses
         static void Main(string[] args)
         {
             int n = int.Parse(Console.ReadLine());
-            List<Car> Cars = new List<Car>();
+            List<Car> cars = new List<Car>();
 
             for(int i = 0; i < n; i++)
             {
@@ -16,7 +16,14 @@ namespace DefiningClasses
                 string model = text[0];
                 double fuelAmount = double.Parse(text[1]);
                 double fuelConsumptionPerKilometer = double.Parse(text[2]);
-                
+                Car car = new Car(model, fuelAmount, fuelConsumptionPerKilometer);
+                cars.Add(car);
+            }
+
+            string cmnd;
+
+            while((cmnd = Console.ReadLine()) != "end")
+            {
 
             }
         }
